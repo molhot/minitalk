@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_server.c                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/28 12:54:33 by satushi           #+#    #+#             */
-/*   Updated: 2022/11/28 17:11:44 by satushi          ###   ########.fr       */
+/*   Created: 2022/10/18 07:44:52 by satushi           #+#    #+#             */
+/*   Updated: 2022/11/28 21:09:51 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include "minitalk.h"
-
-int main()
+size_t	ft_putchar(char inputchar_num)
 {
-	pid_t PID;
+	return (write(1, &inputchar_num, 1));
+}
 
-	PID = getpid();
-	ft_printf("PID is %d\n", PID);
-	while(1);
-	return 0;
+size_t	ft_putchar_string(char *sub_string)
+{
+	size_t	len;
+
+	if (sub_string == NULL)
+		return (ft_putchar_string("(null)"));
+	len = 0;
+	while (sub_string[len] != '\0')
+		len = len + 1;
+	return (write(1, sub_string, len));
 }

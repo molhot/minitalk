@@ -1,17 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_client.c                                        :+:      :+:    :+:   */
+/*   semimalchange.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/28 12:54:48 by satushi           #+#    #+#             */
-/*   Updated: 2022/11/28 21:45:59 by satushi          ###   ########.fr       */
+/*   Created: 2022/11/28 20:25:25 by satushi           #+#    #+#             */
+/*   Updated: 2022/11/28 21:28:41 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minitalk.h"
-//send string
+//#include <minitalk.h>
+#include <stdio.h>
+# include <string.h>
+# include <stdlib.h>
+# include <unistd.h>
+# include <stdlib.h>
+# include <stdarg.h>
+# include <signal.h>
+# include <sys/types.h>
+# include <unistd.h>
+
+
+size_t	ft_putchar(char inputchar_num)
+{
+	write(1, &inputchar_num, 1);
+}
 
 int ft_obtainbite(int num, char *basestring)
 {
@@ -27,15 +41,11 @@ int ft_obtainbite(int num, char *basestring)
 	}
 }
 
-int *char_to_bit(int char_num)
+int main()
 {
-	while ()
-}
+	int stringlen;
 
-int main(int ac, char **av)
-{
-	if (ac != 2)
-		return 1;
-	
-	//kill((pid_t)ft_atoi(av[1]), SIGSEGV);
+	stringlen = ft_obtainbite(10, "01");
+	ft_putchar('\n');
+	return 0;
 }

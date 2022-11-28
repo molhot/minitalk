@@ -1,6 +1,6 @@
 NAME = minitalk.a
 
-SRCS = ft_printf.c ft_putnbr_string.c ft_putstr.c
+SRCS = ft_server.c ft_printf.c ft_putnbr_string.c ft_putstr.c ft_atoi.c
 
 OBJS = $(SRCS:.c=.o)
 
