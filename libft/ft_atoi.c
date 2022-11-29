@@ -6,11 +6,9 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 01:42:50 by satushi           #+#    #+#             */
-/*   Updated: 2022/10/19 07:50:49 by satushi          ###   ########.fr       */
+/*   Updated: 2022/11/29 08:05:12 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 static int	sub_num(const char *first, int counter, int p_m)
 {

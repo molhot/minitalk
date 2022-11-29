@@ -6,10 +6,11 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 07:44:52 by satushi           #+#    #+#             */
-/*   Updated: 2022/11/28 21:09:51 by satushi          ###   ########.fr       */
+/*   Updated: 2022/11/29 08:41:34 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "minitalk.h"
 
 size_t	ft_putchar(char inputchar_num)
 {

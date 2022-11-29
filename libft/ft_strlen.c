@@ -6,11 +6,11 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 17:33:34 by satushi           #+#    #+#             */
-/*   Updated: 2022/10/15 17:34:59 by satushi          ###   ########.fr       */
+/*   Updated: 2022/11/29 07:54:35 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../minitalk.h"
 
 size_t	ft_strlen(const char (*string_row))
 {

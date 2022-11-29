@@ -6,11 +6,11 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 20:06:16 by satushi           #+#    #+#             */
-/*   Updated: 2022/10/19 08:14:11 by satushi          ###   ########.fr       */
+/*   Updated: 2022/11/29 07:49:53 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../minitalk.h"
 
 void	*ft_calloc(size_t n, size_t size)
 {

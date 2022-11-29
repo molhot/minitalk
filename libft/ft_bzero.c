@@ -6,11 +6,11 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 20:07:45 by satushi           #+#    #+#             */
-/*   Updated: 2022/10/15 20:31:33 by satushi          ###   ########.fr       */
+/*   Updated: 2022/11/29 07:49:48 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../minitalk.h"
 
 void	ft_bzero(void *str, size_t n)
 {
