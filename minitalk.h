@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 16:22:11 by satushi           #+#    #+#             */
-/*   Updated: 2022/11/29 21:34:59 by satushi          ###   ########.fr       */
+/*   Updated: 2022/11/29 22:40:45 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ size_t	ft_putchar(char inputchar_num);
 size_t	ft_putchar_string(char *sub_string);
 size_t	inputnbr(long long subject, char *src);
 int		ft_atoi(const char *str);
+void	ft_putchar_fd(char c, int fd);
 
 typedef struct s_char
 {
