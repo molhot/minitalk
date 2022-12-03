@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
+/*   By: satushi <satushi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 01:42:50 by satushi           #+#    #+#             */
-/*   Updated: 2022/11/28 17:06:06 by satushi          ###   ########.fr       */
+/*   Updated: 2022/12/03 23:02:43 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,17 +66,3 @@ int	ft_atoi(const char *str)
 		return (0);
 	return (sub_num(str - counter, counter - 1, plus_or_minus));
 }
-
-/*
-#include<stdio.h>
-int main()
-{
-	char *n = "00000000000000000000000000000000000000000000000000000047";
-	//18446744073709551615
-	int i1 = atoi(n);
-	int i2 = ft_atoi(n);
-
-	printf("%d\n", i1);
-	printf("%d\n", i2);
-}
-*/
