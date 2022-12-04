@@ -6,7 +6,7 @@
 /*   By: satushi <satushi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 01:42:50 by satushi           #+#    #+#             */
-/*   Updated: 2022/12/03 23:02:43 by satushi          ###   ########.fr       */
+/*   Updated: 2022/12/04 16:18:45 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int	ft_atoi(const char *str)
 			plus_or_minus = 1;
 		str = str + 1;
 	}
-	while(*str == '0')
+	while (*str == '0')
 		str = str + 1;
 	while ('0' <= *str && *str <= '9')
 	{
