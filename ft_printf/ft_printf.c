@@ -6,13 +6,13 @@
 /*   By: satushi <satushi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 07:44:08 by satushi           #+#    #+#             */
-/*   Updated: 2022/11/11 20:45:50 by satushi          ###   ########.fr       */
+/*   Updated: 2022/12/04 15:39:25 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_switch_input(char fmt, va_list args, size_t *counter)
+static void	ft_switch_input(char fmt, va_list args, size_t *counter)
 {
 	if (fmt == 'c')
 		*counter = *counter + ft_putchar(va_arg(args, int));
