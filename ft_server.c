@@ -3,62 +3,53 @@
 /*                                                        :::      ::::::::   */
 /*   ft_server.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
+/*   By: satushi <satushi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 12:54:33 by satushi           #+#    #+#             */
-/*   Updated: 2022/11/29 22:40:32 by satushi          ###   ########.fr       */
+/*   Updated: 2022/12/04 15:33:26 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "minitalk.h"
 
 t_char	g_char;
 
-void init_struct(void)
+void	ft_putchar_string(char *string)
 {
-	g_char.bits_shifted_counter = 0;
-	g_char.assembled_char = '\0';
+	size_t	char_len;
+
+	char_len = 0;
+	while (string[char_len] != 0)
+		char_len++;
+	write(1, &string, char_len);
 }
 
-void	ft_putchar_fd(char c, int fd)
+void	recomponent(int signal)
 {
-	unsigned char	c_alt;
-
-	if(fd < 0)
-		return ;
-	c_alt = (unsigned char)c;
-	write(fd, &c_alt, 1);
-}
-
-void recomponent(int signal)
-{
-	//int counter = 1;
 	if (signal == SIGUSR1)
+		g_char.last_ch += 00000001 << g_char.bitcounter;
+	if (g_char.bitcounter == 7)
 	{
-		g_char.assembled_char += 000000001 << g_char.bits_shifted_counter;
-		//printf("%d\n", g_char.assembled_char);
-	}
-	if(g_char.bits_shifted_counter == 7)
-	{
-		ft_putchar_fd(g_char.assembled_char, 0);
-		init_struct();
+		//ft_putchar_fd(g_char.last_ch, 0);
+		write(0, &g_char.last_ch, 1);
+		g_char.bitcounter = 0;
+		g_char.last_ch = '\0';
 		return ;
 	}
-	g_char.bits_shifted_counter++;
+	g_char.bitcounter++;
 }
 
-int main()
+int	main(void)
 {
-	pid_t PID;
+	pid_t	this_pid;
 
-	PID = getpid();
+	this_pid = getpid();
 	signal(SIGUSR1, recomponent);
 	signal(SIGUSR2, recomponent);
-	init_struct();
-	printf("PID is %d\n", PID);
-	while(1)
+	g_char.bitcounter = 0;
+	g_char.last_ch = '\0';
+	ft_putchar_string("PID is %d\n", this_pid);
+	while (1)
 		pause();
-	printf("\n");
-	return 0;
+	return (0);
 }

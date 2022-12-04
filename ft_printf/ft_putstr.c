@@ -1,38 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_client.c                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: satushi <satushi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/28 12:54:48 by satushi           #+#    #+#             */
-/*   Updated: 2022/12/04 15:01:35 by satushi          ###   ########.fr       */
+/*   Created: 2022/10/18 07:44:52 by satushi           #+#    #+#             */
+/*   Updated: 2022/11/11 20:36:26 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minitalk.h"
-//send string
+#include "ft_printf.h"
 
-int main(int ac, char **av)
+size_t	ft_putchar(char inputchar_num)
 {
-	char *sub;
-	int i;
-	int shitcounter;
+	return (write(1, &inputchar_num, 1));
+}
 
-	sub = av[2];
-	i = 0;
-	while (sub[i] != '\0')
-	{
-		shitcounter = 0;
-		while (shitcounter <= 7)
-		{
-			if((sub[i] >> shitcounter) & 000000001)
-				kill((pid_t)ft_atoi(av[1]), SIGUSR1);
-			else
-				kill((pid_t)ft_atoi(av[1]), SIGUSR2);
-			shitcounter++;
-			usleep(1000);
-		}
-		i++;
-	}
+size_t	ft_putchar_string(char *sub_string)
+{
+	size_t	len;
+
+	if (sub_string == NULL)
+		return (ft_putchar_string("(null)"));
+	len = 0;
+	while (sub_string[len] != '\0')
+		len = len + 1;
+	return (write(1, sub_string, len));
 }
