@@ -6,7 +6,7 @@
 /*   By: satushi <satushi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 12:54:48 by satushi           #+#    #+#             */
-/*   Updated: 2022/12/04 15:01:35 by satushi          ###   ########.fr       */
+/*   Updated: 2022/12/04 16:12:36 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ int main(int ac, char **av)
 	int i;
 	int shitcounter;
 
+	if (ac != 3)
+		return (1);
 	sub = av[2];
 	i = 0;
 	while (sub[i] != '\0')
