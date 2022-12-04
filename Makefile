@@ -28,7 +28,7 @@ clean :
 	$(RM) $(CLIENT_OBJ) $(SERVER_OBJ)
 
 fclean : clean
-	$(RM) $(CLIENT_NAME) $(SSERVER_NAME)
+	$(RM) $(CLIENT_NAME) $(SERVER_NAME) $(NAME)
 
 re : fclean all
 
