@@ -11,6 +11,7 @@ SERVER_OBJ = $(SERVER_SRC:.c=.o)
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
+GFLAGS = -g -fsanitize=address
 RM = rm -f
 
 all : $(NAME)
@@ -19,10 +20,10 @@ $(NAME) : $(SERVER_NAME) $(CLIENT_NAME)
 	ar -rc $(NAME) $(SERVER_NAME) $(CLIENT_NAME)
 
 $(CLIENT_NAME): $(CLIENT_OBJ)
-	$(CC) $(CFLAGS) $(CLIENT_OBJ) -o $(CLIENT_NAME)
+	$(CC) $(GFLAGS) $(CFLAGS) $(CLIENT_OBJ) -o $(CLIENT_NAME)
 
 $(SERVER_NAME): $(SERVER_OBJ)
-	$(CC) $(CFLAGS) $(SERVER_OBJ) -o $(SERVER_NAME)
+	$(CC) $(GFLAGS) $(CFLAGS) $(SERVER_OBJ) -o $(SERVER_NAME)
 
 clean :
 	$(RM) $(CLIENT_OBJ) $(SERVER_OBJ)
