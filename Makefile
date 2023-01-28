@@ -1,4 +1,4 @@
-NAME = minitalk.a
+NAME = $(CLIENT_NAME) $(SERVER_NAME)
 
 CLIENT_NAME = client
 SERVER_NAME = server
@@ -15,9 +15,6 @@ GFLAGS = -g -fsanitize=address
 RM = rm -f
 
 all : $(NAME)
-
-$(NAME) : $(SERVER_NAME) $(CLIENT_NAME)
-	ar -rc $(NAME) $(SERVER_NAME) $(CLIENT_NAME)
 
 $(CLIENT_NAME): $(CLIENT_OBJ)
 	$(CC) $(GFLAGS) $(CFLAGS) $(CLIENT_OBJ) -o $(CLIENT_NAME)
