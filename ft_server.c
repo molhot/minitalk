@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_server.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: satushi <satushi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 12:54:33 by satushi           #+#    #+#             */
-/*   Updated: 2023/01/03 02:12:01 by user             ###   ########.fr       */
+/*   Updated: 2023/01/28 15:27:30 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,5 @@ int	main(void)
 	ft_printf("PID is %d\n", getpid());
 	while (1)
 		pause();
-	
 	return (0);
 }
